@@ -10,10 +10,10 @@ package pct;
  * @author edson_home
  */
 
-public class Funcionario {
-private int numMatricula;
-private String nome;
-private String liberado; 
+    public class Funcionario {
+    private int numMatricula;
+    private String nome;
+    private String liberado; 
     private String apresentaNivel;
     private char nivel; 
     private double salario;
@@ -21,17 +21,17 @@ private String liberado;
     private double calcularInss;
     private boolean afastado;
 
-public void imprimirFuncionario(){
-System.out.println("Numero da Matricula: "+getNumMatricula());
-System.out.println("Esta liberado para trabalho? "+getLiberado());
-System.out.println("Nome: "+getNome());
-System.out.println("Nivel: "+getApresentaNivel());
-System.out.println("Salario Bruto: R$ "+getSalario());
-System.out.println("O salario Bruto de R$ " +getSalario()+ ", sofreu um desconto de R$ " +getCalcularInss()+ " pertinente ao INSS ");
-System.out.println("O salario Liquido será de R$ " +getSalarioLiquido()+" ");
+    public void imprimirFuncionario(){
+    System.out.println("Numero da Matricula: "+getNumMatricula());
+    System.out.println("Esta liberado para trabalho? "+getLiberado());
+    System.out.println("Nome: "+getNome());
+    System.out.println("Nivel: "+getApresentaNivel());
+    System.out.println("Salario Bruto: R$ "+getSalario());
+    System.out.println("O salario Bruto de R$ " +getSalario()+ ", sofreu um desconto de R$ " +getCalcularInss()+ " pertinente ao INSS ");
+    System.out.println("O salario Liquido será de R$ " +getSalarioLiquido()+" ");
                                   }
     
-public void calcularINSS(){
+    public void calcularINSS(){
             if (getSalario() <= 720) {
             setCalcularInss(getSalario() * 0.0765);
             setSalarioLiquido(getSalario() - getCalcularInss());
@@ -193,18 +193,6 @@ public void calcularINSS(){
         this.afastado = afastado;
     }
     
-    
-    public void imprimirOutroFuncionario(){
-    System.out.println("Numero da Matricula: "+getNumMatricula());
-    System.out.println("Esta liberado para trabalho? "+getLiberado());
-    System.out.println("Nome: "+getNome());
-    System.out.println("Nivel: "+getApresentaNivel());
-    System.out.println("Salario Bruto: R$ "+getSalario());
-    System.out.println("O salario Bruto de R$ " +getSalario()+ ", sofreu um desconto de R$ " +getCalcularInss()+ " pertinente ao INSS ");
-    System.out.println("O salario Liquido será de R$ " +getSalarioLiquido()+" ");
-                                  }
-
-
     public Funcionario() {
     }
 

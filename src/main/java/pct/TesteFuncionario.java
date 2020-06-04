@@ -14,30 +14,30 @@ public class TesteFuncionario {
             
             
             
-            Funcionario F = new Funcionario();
+            Funcionario funcionario = new Funcionario();
             
-            F.setNumMatricula(1);
-            F.setNome("João");
-            F.setNivel('T'); // T = TRAINEE, J = JUNIOR, P = PLENO, S = SENIOR
-            F.setSalario(1042.00);
-            F.setAfastado(true);     
-            
-            
-            if (F.isAfastado()){F.setLiberado("SIM");}else{F.setLiberado("NAO");}
+            funcionario.setNumMatricula(1);
+            funcionario.setNome("João");
+            funcionario.setNivel('T'); // T = TRAINEE, J = JUNIOR, P = PLENO, S = SENIOR
+            funcionario.setSalario(1042.00);
+            funcionario.setAfastado(true);     
             
             
-            switch (F.getNivel()) {
+            if (funcionario.isAfastado()){funcionario.setLiberado("SIM");}else{funcionario.setLiberado("NAO");}
+            
+            
+            switch (funcionario.getNivel()) {
                 case 'T':
-                    F.setApresentaNivel("TRAINEE");
+                    funcionario.setApresentaNivel("TRAINEE");
                     break;
                 case 'J':
-                    F.setApresentaNivel("JUNIOR");
+                    funcionario.setApresentaNivel("JUNIOR");
                     break;
                 case 'P':
-                    F.setApresentaNivel("PLENO");
+                    funcionario.setApresentaNivel("PLENO");
                     break;
                 case 'S':
-                    F.setApresentaNivel("SENIOR");
+                    funcionario.setApresentaNivel("SENIOR");
                     break;
                 default:
                     break;
@@ -45,16 +45,16 @@ public class TesteFuncionario {
 
             
             //Testando o calculo de INSS
-            F.calcularINSS();
+            funcionario.calcularINSS();
             
             //Testando a impresão dos dados 
-            F.imprimirFuncionario();
+            funcionario.imprimirFuncionario();
                        
             //Outro Funcionario
-            Funcionario outroFuncionario = new Funcionario(10,"Pedro", "Sim", "Sim", 'Ṕ', 1000, 1000, 1000, false);
+            Funcionario outroFuncionario = new Funcionario(10,"Pedro", "Sim", "Sim", 'P', 1000, 1000, 1000, false);
    
             //Testando a impresão dos dados 
-            F.imprimirOutroFuncionario();
+            outroFuncionario.imprimirFuncionario();
 
                    
 
